@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5">
+
+    <!-- ScrollView to make the content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/signupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Quality Nowcast System"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- CardView containing images and text below them -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Horizontal LinearLayout for images -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!-- First Image -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:src="@drawable/img_15"
+
+                                android:contentDescription="Image 1"
+                                android:onClick="openRealTimeFeedActivity" />
+
+                            <!-- TextView Below First Image -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Real-Time Feed"
+                                android:gravity="center"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <!-- Second Image -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:src="@drawable/img_16"
+                                android:contentDescription="img_14"
+                                android:onClick="openDerivedParametersActivity" />
+
+                            <!-- TextView Below Second Image -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Derived Parameters"
+                                android:gravity="center"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ImageView below the CardView and above the paragraph -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/imgq"
+                android:contentDescription="Descriptive Image" />
+
+            <!-- TextView for paragraph description below the image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="The human impacts on the coastal ocean in terms of pollution and waste disposals have greatly modified the water quality and the fluxes of material to the coastal waters. Natural processes of monsoonal winds, river water fluxes, and ocean circulation often make anthropogenic perturbations more complex to study. program of INCOIS envisages monitoring time-series of various biogeochemical parameters to assess the biogeochemical variability in the Indian coastal waters and understand the ecosystem trophic status. Under this program, INCOIS has established two time-series stations in the Indian coastal waters (east coast: Visakhapatnam, west coast: Kochi) through sustained buoy-based automated observatories. The establishment of more time-series stations is planned at strategic locations of the Indian coast. The INCOIS service disseminates high-frequency data on several physical-chemical-biological parameters. The data recorded by the observatories is aimed at monitoring water quality parameters, developing an understanding of coastal processes, assessing the health of the coastal waters, model validation, assimilation, and forecasting of water quality parameters. The target users are fishery resource managers, tourists, ecologists, fishermen, researchers, and environmentalists. The data recorded by the coastal observatories are well-validated with in situ laboratory analysis at regular intervals."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

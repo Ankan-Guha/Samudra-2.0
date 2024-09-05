@@ -12,7 +12,9 @@ import androidx.cardview.widget.CardView;
 
 import com.example.samudra20.Home.Main.BeachInfo.AirIndex.AirIndex;
 import com.example.samudra20.Home.Main.BeachInfo.FishingZone.FishingZone;
+import com.example.samudra20.Home.Main.BeachInfo.Tsunami.TsunamiCenter;
 import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.RealTimeFeed;
+import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.WaterFirst;
 import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.WaterQuality;
 import com.example.samudra20.R;
 import com.google.gson.Gson;
@@ -31,9 +33,9 @@ import okhttp3.Response;
 public class BeachInfoActivity extends AppCompatActivity {
 
     private TextView beachName;
-    private CardView airIndex,water, fishingZone;
+    private CardView airIndex,water, fishingZone,tsunamiWarning;
     private ImageView beachPhoto;
-    private TextView  oxygenLevel, tides, waterQuality, tsunamiWarning;
+    private TextView  oxygenLevel, tides, waterQuality;
     private CardView weatherCard;
     private final String API_ACCESS_KEY = "YOUR_API_ACCESS_KEY"; // Replace with your actual API key
 
@@ -50,6 +52,8 @@ public class BeachInfoActivity extends AppCompatActivity {
 
 
         airIndex = findViewById(R.id.airIndexCard);
+        double latitude = getIntent().getDoubleExtra("LATITUDE", 0.0);
+        double longitude = getIntent().getDoubleExtra("LONGITUDE", 0.0);
 
         // Set click listener on airIndex card to open AirIndex activity
         airIndex.setOnClickListener(new View.OnClickListener() {
@@ -57,17 +61,26 @@ public class BeachInfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open AirIndex activity when the airIndex card is clicked
                 Intent intent = new Intent(BeachInfoActivity.this, AirIndex.class);
+                intent.putExtra("LATITUDE", latitude); // Pass latitude
+                intent.putExtra("LONGITUDE", longitude); // Pass longitude
                 startActivity(intent);
             }
         });
-        double latitude = getIntent().getDoubleExtra("LATITUDE", 0.0);
-        double longitude = getIntent().getDoubleExtra("LONGITUDE", 0.0);
+        tsunamiWarning = findViewById(R.id.tsunami);
+
+        // Set click listener on airIndex card to open AirIndex activity
+        tsunamiWarning.setOnClickListener(v -> {
+            Intent intent = new Intent(BeachInfoActivity.this, TsunamiCenter.class);
+            intent.putExtra("LATITUDE", latitude); // Pass latitude
+            intent.putExtra("LONGITUDE", longitude); // Pass longitude
+            startActivity(intent);
+        });
 
         water = findViewById(R.id.water);
 
         // Set click listener on airIndex card to open AirIndex activity
         water.setOnClickListener(v -> {
-            Intent intent = new Intent(BeachInfoActivity.this, RealTimeFeed.class);
+            Intent intent = new Intent(BeachInfoActivity.this, WaterFirst.class);
             intent.putExtra("LATITUDE", latitude); // Pass latitude
             intent.putExtra("LONGITUDE", longitude); // Pass longitude
             startActivity(intent);
@@ -86,7 +99,7 @@ public class BeachInfoActivity extends AppCompatActivity {
 
         tides = findViewById(R.id.TextTides);
         //waterQuality = findViewById(R.id.TextWater);
-        tsunamiWarning = findViewById(R.id.TextTsunami);
+
         // weatherCard = findViewById(R.id.weather); // Uncomment if used
 
         // Get beach details from Intent
