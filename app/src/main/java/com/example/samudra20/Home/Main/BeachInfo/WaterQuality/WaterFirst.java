@@ -4,16 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.samudra20.Home.Main.BeachInfo.BeachInfoActivity;
-import com.example.samudra20.Home.Main.BeachInfo.FishingZone.FishingZone;
 import com.example.samudra20.R;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class WaterFirst extends AppCompatActivity {
 

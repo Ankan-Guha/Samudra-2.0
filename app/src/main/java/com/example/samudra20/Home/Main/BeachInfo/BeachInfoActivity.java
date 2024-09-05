@@ -3,7 +3,6 @@ package com.example.samudra20.Home.Main.BeachInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,10 +11,9 @@ import androidx.cardview.widget.CardView;
 
 import com.example.samudra20.Home.Main.BeachInfo.AirIndex.AirIndex;
 import com.example.samudra20.Home.Main.BeachInfo.FishingZone.FishingZone;
-import com.example.samudra20.Home.Main.BeachInfo.Tsunami.TsunamiCenter;
-import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.RealTimeFeed;
+//import com.example.samudra20.Home.Main.BeachInfo.Tides.TideActivity;
+import com.example.samudra20.Home.Main.BeachInfo.Tide.TideActivity;
 import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.WaterFirst;
-import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.WaterQuality;
 import com.example.samudra20.R;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -33,9 +31,9 @@ import okhttp3.Response;
 public class BeachInfoActivity extends AppCompatActivity {
 
     private TextView beachName;
-    private CardView airIndex,water, fishingZone,tsunamiWarning;
+    private CardView airIndex,water, fishingZone,tsunamiWarning, tides;
     private ImageView beachPhoto;
-    private TextView  oxygenLevel, tides, waterQuality;
+    private TextView  oxygenLevel, waterQuality;
     private CardView weatherCard;
     private final String API_ACCESS_KEY = "YOUR_API_ACCESS_KEY"; // Replace with your actual API key
 
@@ -66,13 +64,21 @@ public class BeachInfoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tides = findViewById(R.id.tides);
+
+        // Set click listener on airIndex card to open AirIndex activity
+        tides.setOnClickListener(v -> {
+            Intent intent = new Intent(BeachInfoActivity.this, TideActivity.class);
+            intent.putExtra("LATITUDE", latitude); // Pass latitude
+            intent.putExtra("LONGITUDE", longitude); // Pass longitude
+            startActivity(intent);
+        });
         tsunamiWarning = findViewById(R.id.tsunami);
 
         // Set click listener on airIndex card to open AirIndex activity
         tsunamiWarning.setOnClickListener(v -> {
-            Intent intent = new Intent(BeachInfoActivity.this, TsunamiCenter.class);
-            intent.putExtra("LATITUDE", latitude); // Pass latitude
-            intent.putExtra("LONGITUDE", longitude); // Pass longitude
+            Intent intent = new Intent(BeachInfoActivity.this, tsAc.class);
+
             startActivity(intent);
         });
 
@@ -97,7 +103,7 @@ public class BeachInfoActivity extends AppCompatActivity {
         });
         oxygenLevel = findViewById(R.id.oxygenLevel);
 
-        tides = findViewById(R.id.TextTides);
+
         //waterQuality = findViewById(R.id.TextWater);
 
         // weatherCard = findViewById(R.id.weather); // Uncomment if used
