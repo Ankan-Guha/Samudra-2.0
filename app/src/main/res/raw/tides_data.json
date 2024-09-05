@@ -1,0 +1,26 @@
+{
+  "location": "Kochi, India",
+  "timeZone": "IST",
+  "tides": [
+    {
+      "time": "2024-09-05T04:00:00",
+      "type": "High",
+      "level": 3.2
+    },
+    {
+      "time": "2024-09-05T10:00:00",
+      "type": "Low",
+      "level": 0.5
+    },
+    {
+      "time": "2024-09-05T16:00:00",
+      "type": "High",
+      "level": 3.5
+    },
+    {
+      "time": "2024-09-05T22:00:00",
+      "type": "Low",
+      "level": 0.3
+    }
+  ]
+}
