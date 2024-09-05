@@ -1,0 +1,16 @@
+{
+  "waterTemperature": 24.5,
+  "salinity": 35.0,
+  "currentSpeed": 1.5,
+  "pHLevel": 8.1,
+  "dissolvedOxygen": 6.8,
+  "dissolvedMethane": 0.002,
+  "pCO2Air": 0.04,
+  "pCO2Water": 0.03,
+  "chlorophyllA": 2.5,
+  "phycoerythrin": 1.0,
+  "phycocyanin": 0.8,
+  "turbidity": 4.2,
+  "coloredDissolvedOrganicMatter": 0.5,
+  "scattering": 1.2
+}

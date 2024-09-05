@@ -28,11 +28,22 @@
         android:id="@+id/search_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:queryHint="Search Beaches"
-        android:paddingLeft="40dp"
-        android:layout_toEndOf="@id/dropdown_menu"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"/>
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="62dp"
+        android:layout_toEndOf="@id/dropdown_menu"
+        android:paddingLeft="0dp"
+        android:queryHint="Search Beaches" />
+
+    <Button
+        android:id="@+id/Help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="100dp"
+        android:text="HELP DESK"></Button>
 
     <fragment
         android:id="@+id/map"

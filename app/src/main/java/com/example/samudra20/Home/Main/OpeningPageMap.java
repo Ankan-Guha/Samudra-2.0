@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.samudra20.Home.Drawer.HelpDesk;
 import com.example.samudra20.Home.Main.BeachInfo.AirIndex.AirIndex;
 import com.example.samudra20.Home.SOS.Sos;
 import com.google.android.gms.maps.GoogleMap;
@@ -61,7 +62,7 @@ public class OpeningPageMap extends AppCompatActivity implements OnMapReadyCallb
     private SearchView searchView;
     private List<Marker> defaultMarkers = new ArrayList<>();
     private DataBeaches ds;
-    private Button b;
+    private Button b,hd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,15 @@ public class OpeningPageMap extends AppCompatActivity implements OnMapReadyCallb
             public void onClick(View v) {
                 // Open AirIndex activity when the airIndex card is clicked
                 Intent intent = new Intent(OpeningPageMap.this, Sos.class);
+                startActivity(intent);
+            }
+        });
+        hd=findViewById(R.id.Help);
+        hd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open AirIndex activity when the airIndex card is clicked
+                Intent intent = new Intent(OpeningPageMap.this, HelpDesk.class);
                 startActivity(intent);
             }
         });

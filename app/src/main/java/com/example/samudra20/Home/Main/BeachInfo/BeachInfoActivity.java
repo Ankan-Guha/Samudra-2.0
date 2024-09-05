@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 
 import com.example.samudra20.Home.Main.BeachInfo.AirIndex.AirIndex;
 import com.example.samudra20.Home.Main.BeachInfo.FishingZone.FishingZone;
+import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.RealTimeFeed;
 import com.example.samudra20.Home.Main.BeachInfo.WaterQuality.WaterQuality;
 import com.example.samudra20.R;
 import com.google.gson.Gson;
@@ -66,7 +67,7 @@ public class BeachInfoActivity extends AppCompatActivity {
 
         // Set click listener on airIndex card to open AirIndex activity
         water.setOnClickListener(v -> {
-            Intent intent = new Intent(BeachInfoActivity.this, WaterQuality.class);
+            Intent intent = new Intent(BeachInfoActivity.this, RealTimeFeed.class);
             intent.putExtra("LATITUDE", latitude); // Pass latitude
             intent.putExtra("LONGITUDE", longitude); // Pass longitude
             startActivity(intent);

@@ -7,6 +7,16 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +27,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Samudra20"
         tools:targetApi="31">
+        <activity
+            android:name=".Home.Drawer.HelpDesk"
+            android:exported="false" />
+        <activity
+            android:name=".Home.Main.BeachInfo.WaterQuality.RealTimeFeed"
+            android:exported="false" />
         <activity
             android:name=".Home.SOS.Sos"
             android:exported="false" />
