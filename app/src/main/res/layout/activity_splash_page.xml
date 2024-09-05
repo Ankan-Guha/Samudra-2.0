@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#2C4447"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splash.SplashPage">
+    <TextView
+        android:id="@+id/NAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="50dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="SAMUDRA"
+        android:textSize="50sp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NAME"
+        android:layout_alignParentStart="true"
+        android:layout_margin="30dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="271dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="by MATRIX"
+        android:textColor="@color/black"
+        android:textSize="25sp"></TextView>
+</RelativeLayout>

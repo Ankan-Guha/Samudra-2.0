@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/currentSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Speed" />
+
+    <TextView
+        android:id="@+id/currentDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Direction" />
+
+    <TextView
+        android:id="@+id/ph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pH Level" />
+
+    <TextView
+        android:id="@+id/salinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salinity" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature" />
+
+    <TextView
+        android:id="@+id/dissolvedOxygen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dissolved Oxygen" />
+
+    <TextView
+        android:id="@+id/dissolvedMethane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dissolved Methane" />
+
+    <TextView
+        android:id="@+id/pco2Air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pCO2 Air" />
+
+    <TextView
+        android:id="@+id/pco2Water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pCO2 Water" />
+
+    <TextView
+        android:id="@+id/chlorophyll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chlorophyll" />
+
+    <TextView
+        android:id="@+id/phycocyanin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phycocyanin" />
+</LinearLayout>
